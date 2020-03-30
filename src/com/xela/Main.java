@@ -19,11 +19,11 @@ public class Main {
         int numberOfPayments = period * 12;
 
         double result = principal*(monthlyInterest* Math.pow(1 +monthlyInterest, numberOfPayments))/(Math.pow(1+monthlyInterest, numberOfPayments) -1);
-
+        String resultFormat = NumberFormat.getCurrencyInstance().format(result);
 
         System.out.println("Principal: " + principal);
         System.out.println("Annual Interest Rate: " + interestRate);
         System.out.println("Period (Years): " + period);
-        System.out.println("Mortgage Payment: " + result);
+        System.out.println("Mortgage Payment: " + resultFormat);
     }
 }
